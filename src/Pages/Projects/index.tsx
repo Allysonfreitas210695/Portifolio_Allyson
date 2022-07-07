@@ -23,7 +23,7 @@ export const Projects: React.FC = () => {
     .catch(() => console.log("error"))
   },
   [repos]);
-  {console.log(repos)}
+  
   return (
     <>
       <Header/>

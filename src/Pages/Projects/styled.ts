@@ -48,6 +48,6 @@ export const Repos = styled.div`
   }
 
   button {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 `

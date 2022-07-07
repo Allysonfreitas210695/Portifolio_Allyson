@@ -18,7 +18,7 @@ export const Section: React.FC = () => {
           <S.WrapperButton>
             <Button>
             <ViewLogo/>
-             <a href="#">Views projects</a>
+             <a href="https://github.com/Allysonfreitas210695?tab=repositories" target="_blank">Views projects</a>
             </Button>
           </S.WrapperButton>
         </S.Info>
