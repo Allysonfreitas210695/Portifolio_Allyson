@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { ViewLogo } from '../../components/Logo';
+import { Section } from '../../components/Section';
 
 import { Title } from '../../components/Title';
 import { api } from '../../services/Api';
@@ -18,9 +19,11 @@ export const Projects: React.FC = () => {
   const [repos, setRepos] = useState<IRepos[]>([]);
 
   useEffect(() => {
-    api.get('users/Allysonfreitas210695/repos')
-    .then(({ data }) => setRepos(data))
-    .catch(() => console.log("error"))
+    setTimeout(() => {
+      api.get('users/Allysonfreitas210695/repos')
+      .then(({ data }) => setRepos(data))
+      .catch(() => console.log("error"))
+    }, 800)
   },
   [repos]);
   
@@ -30,6 +33,9 @@ export const Projects: React.FC = () => {
       <S.Wrapper>
           <Title title='Projects' cor/>
         <S.Container>
+            {repos.length === 0 && (
+              <h2 style={{fontSize: '40px'}}>Loading...</h2>
+            )}
             {repos.length > 0 && repos.map((respositories) => (
               <S.Repos key={respositories.id}>
                 <h2>Respository:</h2>
