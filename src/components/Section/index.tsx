@@ -4,6 +4,7 @@ import CardSkills from '../CardSkills';
 import { InfoSection } from '../InfoSection';
 import { ViewLogo } from '../Logo';
 import { Title } from '../Title';
+import { Link } from 'react-router-dom';
 import * as S from './styled';
 
 export const Section: React.FC = () => {
@@ -18,7 +19,7 @@ export const Section: React.FC = () => {
           <S.WrapperButton>
             <Button>
             <ViewLogo/>
-             <a href="https://github.com/Allysonfreitas210695?tab=repositories" target="_blank">Views projects</a>
+             <Link to="/projects">Views projects</Link>
             </Button>
           </S.WrapperButton>
         </S.Info>
